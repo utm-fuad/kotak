@@ -1,0 +1,1 @@
+java -jar "E:\UTM\Sep12Feb13\3.PengabdianMasyarakat\X-Epsbed\PDPTDIKTI\KotakKotakan\dist\KotakKotakan.jar"

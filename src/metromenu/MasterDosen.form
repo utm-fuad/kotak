@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Properties>
+    <Property name="opaque" type="boolean" value="false"/>
+  </Properties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,-46,0,0,4,98"/>
+  </AuxValues>
+
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+  <SubComponents>
+    <Container class="javax.swing.JSplitPane" name="jSplitPane2">
+      <Properties>
+        <Property name="dividerLocation" type="int" value="700"/>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Default Cursor"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+          <BorderConstraints direction="Center"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JScrollPane" name="gulungPanelAtribut">
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleParent" type="javax.accessibility.Accessible" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="jSplitPane2"/>
+            </Property>
+          </AccessibilityProperties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout$JSplitPaneConstraintsDescription">
+              <JSplitPaneConstraints position="left"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="panelAtribut">
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="panelLabel">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="West"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+                    <Property name="columns" type="int" value="0"/>
+                    <Property name="rows" type="int" value="50"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="NIDNNUPLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="NIDN/NUP"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="NIPlamaLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="NIP Lama:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="NIPbaruLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="NIP Baru:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="golonganLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Golongan:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="pangkatLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Pangkat:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jabatanfungsionalLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Jabatan Fungsional:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jabatanstrukturalLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Jabatan Struktural:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="kodeperguruantinggiLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Kode Perguruan Tinggi:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="kodeprogramstudiLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Kode Program Studi:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="kodefakultasLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Kode Fakultas:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="kodejurusanLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Kode Jurusan:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="namadosenLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Nama Dosen:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="nomorKTPLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Nomor KTP:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="gelarakademikdepanLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Gelar Akademik Depan:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="gelarakademikbelakangLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Gelar Akademik Belakang:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jeniskelaminLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Jenis Kelamin:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="tempatlahirLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Tempat Lahir:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="tanggallahirLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Tanggal Lahir:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="statusaktifLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Status Aktif:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="mulaimasukdosenLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Mulai Masuk Dosen:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="mulaisemesterLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Mulai Semester:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="kodejenjangpendidikanLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Kode Jenjang Pendidikan:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="kodejabatanakademikLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Kode Jabatan Akademik:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="ikatankerjaLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Ikatan Kerja:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="aktadanijinmengajarLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Akta dan Ijin Mengajar:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="alamatLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Alamat:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="kodekotaLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Kode Kota:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="kodeprovinsiLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Kode Provinsi:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="kodeposLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Kode Pos:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="kodenegaraLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Kode Negara:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="nosertifikasidosenLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="No Sertifikasi Dosen:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="tglkeluarsertifikasidosenLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Tgl Keluar Sertifikasi Dosen:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="niraLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Nira:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="statusvalidasiLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Status Validasi:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="teleponLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Telepon:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="hpLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Hp:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="IDlogauditLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="IDlogaudit:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="IDlogauditLabel1">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Email:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="IDlogauditLabel2">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="File Foto:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="IDlogauditLabel3">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Kode Pendidikan Tinggi:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="IDlogauditLabel4">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Bidang Ilmu:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="IDlogauditLabel5">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Nama Kota:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="IDlogauditLabel6">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Faximile:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="IDlogauditLabel7">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="NIDN Lama:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="IDlogauditLabel8">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="NIDN Honorer:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="IDlogauditLabel9">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Last Update:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="IDlogauditLabel10">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Last Editor:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="IDlogauditLabel11">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Status Pegawai:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="IDlogauditLabel12">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="NIDN Hapus:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="IDlogauditLabel13">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="UUID:"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="panelTextField">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="Center"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+                    <Property name="columns" type="int" value="0"/>
+                    <Property name="rows" type="int" value="50"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JFormattedTextField" name="NIDNNUPField">
+                      <Properties>
+                        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                          <Format format="##########" subtype="-1" type="5"/>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="NIDNNUPFieldKeyPressed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JFormattedTextField" name="NIPlamaField">
+                      <Properties>
+                        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                          <Format format="#########" subtype="-1" type="5"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JFormattedTextField" name="NIPbaruField">
+                      <Properties>
+                        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                          <Format format="##################" subtype="-1" type="5"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="golonganField">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="pangkatField">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="jabatanfungsionalField">
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jabatanstrukturalField">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JFormattedTextField" name="kodeperguruantinggiField">
+                      <Properties>
+                        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                          <Format format="######" subtype="-1" type="5"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="kodeprogramstudiField">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="kodefakultasField">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="kodejurusanField">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="namadosenField">
+                    </Component>
+                    <Component class="javax.swing.JFormattedTextField" name="nomorKTPField">
+                      <Properties>
+                        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                          <Format format="#################" subtype="-1" type="5"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="gelarakademikdepanField">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="gelarakademikbelakangField">
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jeniskelaminField">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="tempatlahirField">
+                    </Component>
+                    <Component class="com.toedter.calendar.JDateChooser" name="tanggallahirField">
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="statusaktifField">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="com.toedter.calendar.JDateChooser" name="mulaimasukdosenField">
+                    </Component>
+                    <Component class="javax.swing.JFormattedTextField" name="mulaisemesterField">
+                      <Properties>
+                        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                          <Format format="#####" subtype="-1" type="5"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="kodejenjangpendidikanField">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="kodejabatanakademikField">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="ikatankerjaField">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="aktadanijinmengajarField">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="alamatField">
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="kodekotaField">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="kodeprovinsiField">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JFormattedTextField" name="kodeposField">
+                      <Properties>
+                        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                          <Format format="#####" subtype="-1" type="5"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="kodenegaraField">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JFormattedTextField" name="nosertifikasidosenField">
+                      <Properties>
+                        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                          <Format format="###########" subtype="-1" type="5"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="com.toedter.calendar.JDateChooser" name="tglkeluarsertifikasidosenField">
+                    </Component>
+                    <Component class="javax.swing.JFormattedTextField" name="niraField">
+                      <Properties>
+                        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
+                          <Format format="##############################" subtype="-1" type="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="statusvalidasiField">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JFormattedTextField" name="teleponField">
+                      <Properties>
+                        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
+                          <Format format="##############" subtype="-1" type="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JFormattedTextField" name="hpField">
+                      <Properties>
+                        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
+                          <Format format="#############" subtype="-1" type="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JFormattedTextField" name="IDlogauditField">
+                      <Properties>
+                        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
+                          <Format format="###" subtype="-1" type="0"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="EmailField">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="FileFotoField">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="KodePendidikanTinggiField">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="BidangIlmuField">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="NamaKotaField">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="FaximileField">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="NIDNLAMAField">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="NIDNHonorerField">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="LastUpdateField">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="LastEditorField">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="StatusPegawaiField">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="NIDNHapusField">
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JScrollPane" name="gulungTabel">
+          <Properties>
+            <Property name="horizontalScrollBarPolicy" type="int" value="32"/>
+            <Property name="verticalScrollBarPolicy" type="int" value="22"/>
+            <Property name="opaque" type="boolean" value="false"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout$JSplitPaneConstraintsDescription">
+              <JSplitPaneConstraints position="right"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="tabel">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="0" rowCount="0"/>
+                </Property>
+                <Property name="autoResizeMode" type="int" value="0"/>
+                <Property name="enabled" type="boolean" value="false"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="panelKontrol">
+      <Properties>
+        <Property name="opaque" type="boolean" value="false"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+          <BorderConstraints direction="South"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+        <Property name="columns" type="int" value="1"/>
+        <Property name="rows" type="int" value="1"/>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JSplitPane" name="jSplitPane1">
+          <Properties>
+            <Property name="dividerLocation" type="int" value="700"/>
+          </Properties>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="panelKontrolSIUD">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout$JSplitPaneConstraintsDescription">
+                  <JSplitPaneConstraints position="left"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+                <Property name="columns" type="int" value="4"/>
+                <Property name="rows" type="int" value="1"/>
+              </Layout>
+            </Container>
+            <Container class="javax.swing.JPanel" name="panelKontrolNavigasiRecord">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout$JSplitPaneConstraintsDescription">
+                  <JSplitPaneConstraints position="right"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+                <Property name="columns" type="int" value="4"/>
+                <Property name="rows" type="int" value="1"/>
+              </Layout>
+            </Container>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
