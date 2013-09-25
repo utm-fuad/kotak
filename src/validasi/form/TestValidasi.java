@@ -20,6 +20,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.NumberFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.logging.Level;
@@ -37,6 +38,7 @@ import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellEditor;
+import javax.swing.table.TableColumnModel;
 import javax.swing.text.JTextComponent;
 import metromenu.HomePage;
 import validasi.SQLiteConnection;
@@ -137,6 +139,35 @@ public class TestValidasi extends javax.swing.JPanel {
         }
     }
     
+    private String getUpdateCriteria(){
+        String s="";
+        try{
+            JTable table=((PanelTabel) jTabbedPane1.getComponentAt(jTabbedPane1.getSelectedIndex())).getTable();
+            int iRow=table.getSelectedRow();
+            int iCol=table.getSelectedColumn();
+            TableColumnModel colModel=table.getColumnModel();
+            
+            String namaTable=((PanelTabel) jTabbedPane1.getComponentAt(jTabbedPane1.getSelectedIndex())).getNamaTabel();
+            ResultSet rs=conn.createStatement().executeQuery("select column_name from c_table_key "
+                    + "where table_name='"+namaTable+"' ");
+            
+            String namaKolom="";
+            while(rs.next()){
+                namaKolom=rs.getString("column_name");
+                if(table.getValueAt(iRow, iCol) instanceof String ||table.getValueAt(iRow, iCol) instanceof Date)
+                    s=s.length()>0? " and ": " "+
+                    " "+namaKolom+ "='"+table.getValueAt(iRow, colModel.getColumnIndex(namaKolom)).toString()+"' ";
+                else if(table.getValueAt(iRow, iCol) instanceof Integer || table.getValueAt(iRow, iCol) instanceof Double || table.getValueAt(iRow, iCol) instanceof Float)
+                    s=s.length()>0? " and ": " "+
+                    " "+namaKolom+ "="+table.getValueAt(iRow, colModel.getColumnIndex(namaKolom)).toString()+" ";
+            }
+            return s.length()>0? " where "+s : " ";
+        }catch(SQLException se){
+            JOptionPane.showMessageDialog(this, se.getMessage());
+        }
+        return s;
+    }
+    
     public TestValidasi() {
         initComponents();
         initDaftarTabel();
@@ -151,9 +182,9 @@ public class TestValidasi extends javax.swing.JPanel {
             public void tableChanged(TableModelEvent e) {
                 if (e.getColumn() == jTable1.getColumnModel().getColumnIndex("Pilih") && e.getType() == TableModelEvent.UPDATE) {
                     int iRow = jTable1.getSelectedRow();
-                    if (iRow < 0) {
-                        return;
-                    }
+//                    if (iRow < 0) {
+//                        return;
+//                    }
 
                     if ((Boolean) jTable1.getValueAt(iRow, jTable1.getColumnModel().getColumnIndex("Pilih")) == true) {
                         String namaTabel = jTable1.getValueAt(iRow, jTable1.getColumnModel().getColumnIndex("Tabel")).toString();
@@ -619,7 +650,7 @@ public class TestValidasi extends javax.swing.JPanel {
                 System.out.println("Update "+namaTable+" set "+namaKolom+"= " +
                             (retVal instanceof Number || retVal instanceof Double || retVal instanceof Integer? 
                             retVal: "'"+retVal.toString()+"' "
-                            + "whereee  ??????") );
+                            + getUpdateCriteria()) );
                 //table
                 return retVal;
             } catch (Exception e) {
