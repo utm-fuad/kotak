@@ -35,6 +35,7 @@ public class TabelImport {
         lst.add("TMST_SMS_PRODI");
         lst.add("TRAN_AKTIVITAS_MENGAJAR_DOSEN");
         lst.add("TRAN_ANGGOTA_PENELITI_AHLI");
+        lst.add("TRAN_ANGGOTA_PENELITI_DUKUNG");
         lst.add("TRAN_ANGGOTA_PENELITIAN_DOSEN");
         lst.add("TRAN_BOBOT_NILAI");
         lst.add("TRAN_DAYA_TAMPUNG");

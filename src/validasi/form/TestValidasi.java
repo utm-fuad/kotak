@@ -56,6 +56,12 @@ import validasi.cek.CekTmstProgramStudi;
 import validasi.cek.CekTmstPustakaPT;
 import validasi.cek.CekTmstSaranaPT;
 import validasi.cek.CekTranAktivitasMengajarDosen;
+import validasi.cek.CekTranAnggotaPenelitiAhli;
+import validasi.cek.CekTranAnggotaPenelitiDukung;
+import validasi.cek.CekTranAnggotaPenelitianDosen;
+import validasi.cek.CekTranBobotNilai;
+import validasi.cek.CekTranDayaTampung;
+import validasi.cek.CekTranFteDosen;
 import validasi.cek.CekTranKuliahMhs;
 import validasi.cek.CekTranNilaiSemesterMhs;
 import validasi.komponen.PanelTabel;
@@ -89,6 +95,12 @@ public class TestValidasi extends javax.swing.JPanel {
     private CekTranAktivitasMengajarDosen cekTranAktivitasMengajarDosen = new CekTranAktivitasMengajarDosen();
     private CekTranKuliahMhs cekTranKuliahMhs = new CekTranKuliahMhs();
     private CekTranNilaiSemesterMhs cekTranNilaiSemesterMhs = new CekTranNilaiSemesterMhs();
+    private CekTranAnggotaPenelitiAhli cekTranAnggotaPenelitiAhli = new CekTranAnggotaPenelitiAhli();
+    private CekTranAnggotaPenelitiDukung cekTranAnggotaPenelitiDukung = new CekTranAnggotaPenelitiDukung();
+    private CekTranAnggotaPenelitianDosen cekTranAnggotaPenelitianDosen = new CekTranAnggotaPenelitianDosen();
+    private CekTranBobotNilai cekTranBobotNilai = new CekTranBobotNilai();
+    private CekTranDayaTampung cekTranDayaTampung = new CekTranDayaTampung();
+    private CekTranFteDosen cekTranFteDosen = new CekTranFteDosen();
 
     /**
      * Creates new form TestValidasi
@@ -276,6 +288,18 @@ public class TestValidasi extends javax.swing.JPanel {
                     cekPesan = cekTranKuliahMhs.cekKolom(baris, namaKolom, rs.getObject(col));
                 } else if (namaTabel.equalsIgnoreCase("TRAN_NILAI_SEMESTER_MHS")) {
                     cekPesan = cekTranNilaiSemesterMhs.cekKolom(baris, namaKolom, rs.getObject(col));
+                } else if (namaTabel.equalsIgnoreCase("TRAN_ANGGOTA_PENELITI_AHLI")) {
+                    cekPesan = cekTranAnggotaPenelitiAhli.cekKolom(baris, namaKolom, rs.getObject(col));
+                } else if (namaTabel.equalsIgnoreCase("TRAN_ANGGOTA_PENELITI_DUKUNG")) {
+                    cekPesan = cekTranAnggotaPenelitiDukung.cekKolom(baris, namaKolom, rs.getObject(col));
+                } else if (namaTabel.equalsIgnoreCase("TRAN_ANGGOTA_PENELITIAN_DOSEN")) {
+                    cekPesan = cekTranAnggotaPenelitianDosen.cekKolom(baris, namaKolom, rs.getObject(col));
+                } else if (namaTabel.equalsIgnoreCase("TRAN_BOBOT_NILAI")) {
+                    cekPesan = cekTranBobotNilai.cekKolom(baris, namaKolom, rs.getObject(col));
+                } else if (namaTabel.equalsIgnoreCase("TRAN_DAYA_TAMPUNG")) {
+                    cekPesan = cekTranDayaTampung.cekKolom(baris, namaKolom, rs.getObject(col));
+                } else if (namaTabel.equalsIgnoreCase("TRAN_FTE_DOSEN")) {
+                    cekPesan = cekTranFteDosen.cekKolom(baris, namaKolom, rs.getObject(col));
                 }
                 System.out.println("Panjang pesanError :"+pesanError.length);
                 pesanError[baris-1][col-1]=cekPesan.length()> 0? "error": "";
