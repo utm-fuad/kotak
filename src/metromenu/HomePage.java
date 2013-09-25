@@ -13,6 +13,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import javax.swing.Timer;
+import validasi.form.SettingTableKey;
+import validasi.form.TestValidasi;
 
 /**
  *
@@ -114,6 +116,8 @@ public class HomePage extends javax.swing.JPanel {
     private KewenanganPengguna kewenanganPengguna;
     private NamaPengguna namaPengguna;
     private PilihFakultas pilihfakultas;
+    private TestValidasi testValidasi; //ditambahkan selasa 24 sept 2013
+    private SettingTableKey settingTableKey;
     
     //ditambahkan pada sabtu, 22 des 2012@krembangan 22.52
     private String kodeperguruantinggi; 
@@ -293,14 +297,27 @@ public class HomePage extends javax.swing.JPanel {
                 pilihfakultas = new PilihFakultas(this);
                 panelMetro.add(pilihfakultas, BorderLayout.CENTER);
                 labelUpOneLevel.setVisible(false);
-            } 
+            }
+        else if (namaPanel.equals("Validasi") ) { //added @selasa 24 sept 2013
+            panelMetro.removeAll();
+            testValidasi = new TestValidasi(this, "Validasi Konten Data");
+            panelMetro.add(testValidasi, BorderLayout.CENTER);                
+            labelJudul.setText("Validasi Konten Data");
+            labelUpOneLevel.setVisible(false);
+        }
+        else if (namaPanel.equals("Atur Kunci Tabel") ) { //added @selasa 24 sept 2013
+            panelMetro.removeAll();
+            settingTableKey = new SettingTableKey(this, "Atur Kunci Tabel");
+            panelMetro.add(settingTableKey, BorderLayout.CENTER);                
+            labelJudul.setText("Atur Kunci Tabel");
+            labelUpOneLevel.setVisible(false);
+        }
         else {
             if (namaPanel.equals("Dosen1") ) {
                 panelMetro.removeAll();
                 menuDosen1 = new MenuDosen1(this);
                 panelMetro.add(menuDosen1, BorderLayout.CENTER);
             } 
-             
             if (namaPanel.equals("Dosen2") ) {
                 panelMetro.removeAll();
                 menuDosen2 = new MenuDosen2(this);
@@ -340,7 +357,7 @@ public class HomePage extends javax.swing.JPanel {
                 panelMetro.removeAll();
                 menuLembaga4 = new MenuLembaga4(this);
                 panelMetro.add(menuLembaga4, BorderLayout.CENTER);
-            }
+            }             
             if (namaPanel.equals("MasterDosen") ) {
                 panelMetro.removeAll();
                 masterDosen = new MasterDosen(this, "MasterDosen");

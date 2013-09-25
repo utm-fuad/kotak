@@ -30,16 +30,17 @@ import koneksi.FTPConnection;
 public class MenuHome extends javax.swing.JPanel {
 
     private HomePage homePage;
-    private String[] judulMenuUtama = {"Dosen", "Mahasiswa", "Institusi", "Sistem", "Referensi", "Utility","Pilih Fakultas Dan Prodi"};
+    private String[] judulMenuUtama = {"Dosen", "Mahasiswa", "Institusi", 
+        "Sistem", "Atur Kunci Tabel", "Validasi", "Pilih Fakultas Dan Prodi"};
     private String[] aikonMenuUtama = {
         "/image/Dosen64.png",
         "/image/Mahasiswa64.png",
         "/image/Institusi64.png",
 //        "/image/Upload.png",
 //        "/image/Download_48.png",
-        "/image/dikti/sistem64.png", //sistem
+        "/image/dikti/sistem64.png", //sistem        
+        "/image/dikti/settabelkey.png", //utility
         "/image/dikti/referensi64.png", //referensi
-        "/image/dikti/utiliti64.png" //utility
     };
     private int counterMenuUtama = 0; //item di root menu 
     private int counterSubMenu = 0;  //item di sub menu
@@ -70,7 +71,11 @@ public class MenuHome extends javax.swing.JPanel {
 //                    
                     homePage.panelBerikutnya("pilihfakultas");
                 }
-                if (counterMenuUtama == 5) { //jika menu Mahasiswa dipilih
+                if (counterMenuUtama == 4) { //jika menu Mahasiswa dipilih
+                    homePage.panelBerikutnya("Atur Kunci Tabel");
+                 }
+                if (counterMenuUtama == 5) { //jika menu Mahasiswa dipilih                    
+                    homePage.panelBerikutnya("Validasi");
 //                    JOptionPane.showMessageDialog(homePage, "Download FIle");
 //                    File file = new File("filename.txt");
 //                    BufferedReader reader = null;
@@ -91,10 +96,7 @@ public class MenuHome extends javax.swing.JPanel {
                 /*
                  if (counterMenuUtama == 3) { //jika menu Dosen dipilih
                  homePage.panelBerikutnya("Sistem");
-                 }
-                 if (counterMenuUtama == 4) { //jika menu Mahasiswa dipilih
-                 homePage.panelBerikutnya("Referensi");
-                 }
+                 }                 
                  if (counterMenuUtama == 5) { //jika menu Lembaga dipilih
                  homePage.panelBerikutnya("Utiliti");
                  }
@@ -298,16 +300,16 @@ public class MenuHome extends javax.swing.JPanel {
                     new javax.swing.ImageIcon(getClass().getResource(
                     aikonMenuUtama[3]))); // NOI18N
             buttonMenu4.setText(judulMenuUtama[6]);
-            /* 
+             
              buttonMenu5.setIcon(
-             new javax.swing.ImageIcon(getClass().getResource(
-             aikonMenuUtama[3]))); // NOI18N
-             buttonMenu5.setText(judulMenuUtama[6]);
-             */
-//            buttonMenu6.setIcon(
-//                    new javax.swing.ImageIcon(getClass().getResource(
-//                    aikonMenuUtama[4]))); // NOI18N
-//            buttonMenu6.setText(judulMenuUtama[7]);
+                 new javax.swing.ImageIcon(getClass().getResource(
+             aikonMenuUtama[4]))); // NOI18N
+             buttonMenu5.setText(judulMenuUtama[4]);
+             
+            buttonMenu6.setIcon(
+                    new javax.swing.ImageIcon(getClass().getResource(
+                    aikonMenuUtama[5]))); // NOI18N
+            buttonMenu6.setText(judulMenuUtama[5]);
 
         }
 
