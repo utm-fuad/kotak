@@ -62,8 +62,12 @@ import validasi.cek.CekTranAnggotaPenelitianDosen;
 import validasi.cek.CekTranBobotNilai;
 import validasi.cek.CekTranDayaTampung;
 import validasi.cek.CekTranFteDosen;
+import validasi.cek.CekTranHKI;
+import validasi.cek.CekTranKerjasamaInstansi;
 import validasi.cek.CekTranKuliahMhs;
 import validasi.cek.CekTranNilaiSemesterMhs;
+import validasi.cek.CekTranPindahanMhsAsing;
+import validasi.cek.CekTranPrestasiMhs;
 import validasi.komponen.PanelTabel;
 import validasi.utilisasi.ColumnResizer;
 import validasi.utilisasi.ResultSetToDefaultTableModel;
@@ -101,6 +105,10 @@ public class TestValidasi extends javax.swing.JPanel {
     private CekTranBobotNilai cekTranBobotNilai = new CekTranBobotNilai();
     private CekTranDayaTampung cekTranDayaTampung = new CekTranDayaTampung();
     private CekTranFteDosen cekTranFteDosen = new CekTranFteDosen();
+    private CekTranHKI cekTranHKI = new CekTranHKI();
+    private CekTranKerjasamaInstansi cekTranKerjasamaInstansi = new CekTranKerjasamaInstansi();
+    private CekTranPindahanMhsAsing cekTranPindahanMhsAsing = new CekTranPindahanMhsAsing();
+    private CekTranPrestasiMhs cekTranPrestasiMhs = new CekTranPrestasiMhs();
 
     /**
      * Creates new form TestValidasi
@@ -300,6 +308,14 @@ public class TestValidasi extends javax.swing.JPanel {
                     cekPesan = cekTranDayaTampung.cekKolom(baris, namaKolom, rs.getObject(col));
                 } else if (namaTabel.equalsIgnoreCase("TRAN_FTE_DOSEN")) {
                     cekPesan = cekTranFteDosen.cekKolom(baris, namaKolom, rs.getObject(col));
+                } else if (namaTabel.equalsIgnoreCase("TRAN_HKI")) {
+                    cekPesan = cekTranHKI.cekKolom(baris, namaKolom, rs.getObject(col));
+                } else if (namaTabel.equalsIgnoreCase("TRAN_KERJASAMA_INSTANSI")) {
+                    cekPesan = cekTranKerjasamaInstansi.cekKolom(baris, namaKolom, rs.getObject(col));
+                } else if (namaTabel.equalsIgnoreCase("TRAN_PINDAHAN_MHS_ASING")) {
+                    cekPesan = cekTranPindahanMhsAsing.cekKolom(baris, namaKolom, rs.getObject(col));
+                } else if (namaTabel.equalsIgnoreCase("TRAN_PRESTASI_MHS")) {
+                    cekPesan = cekTranPindahanMhsAsing.cekKolom(baris, namaKolom, rs.getObject(col));
                 }
                 System.out.println("Panjang pesanError :"+pesanError.length);
                 pesanError[baris-1][col-1]=cekPesan.length()> 0? "error": "";
