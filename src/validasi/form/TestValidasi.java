@@ -647,10 +647,24 @@ public class TestValidasi extends javax.swing.JPanel {
                 String namaTable=((PanelTabel) jTabbedPane1.getComponentAt(jTabbedPane1.getSelectedIndex())).getNamaTabel();
                 String namaKolom= ((PanelTabel)jTabbedPane1.getComponentAt(jTabbedPane1.getSelectedIndex()))
                         .getTable().getColumnName(col);
-                System.out.println("Update "+namaTable+" set "+namaKolom+"= " +
+                String criteria=getUpdateCriteria();
+                String query="Update "+namaTable+" set "+namaKolom+"= " +
                             (retVal instanceof Number || retVal instanceof Double || retVal instanceof Integer? 
                             retVal: "'"+retVal.toString()+"' "
-                            + getUpdateCriteria()) );
+                            + criteria) ;
+                System.out.println(query);
+                if(criteria.length() >0){
+                    try{
+                        int i=conn.createStatement().executeUpdate(query);
+                        if(i>0){
+                            System.out.println("Update kolom sukses!");
+                        }
+                    }catch(SQLException se){
+                        JOptionPane.showMessageDialog(null, se.getMessage());
+                    }
+                }else{
+                    JOptionPane.showMessageDialog(null, "Setting kolom kunci di tabel "+namaTable+" belum diset!");
+                }
                 //table
                 return retVal;
             } catch (Exception e) {
