@@ -38,6 +38,7 @@ public class PanelTabel extends javax.swing.JPanel {
         jTable1.getTableHeader().setReorderingAllowed(false);
         jTable1.setCellSelectionEnabled(true);
         jTable1.setRowHeight(22);
+        jTable1.putClientProperty("terminateEditOnFocusLost", Boolean.TRUE);
 //        jTable1.getModel().addTableModelListener(new TableModelListener() {
 //
 //            @Override
