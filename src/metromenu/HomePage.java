@@ -233,6 +233,14 @@ public class HomePage extends javax.swing.JPanel {
         };
     }
     
+    public void jalankanGlassPanenya() {
+        bingkai.jalankanGlassPanenya();        
+    }
+    
+    public void hentikanGlassPanenya() {
+        bingkai.hentikanGlassPanenya();
+    }
+    
     public void simpanKodePT(String kodept) {
         kodeperguruantinggi = kodept;
     }

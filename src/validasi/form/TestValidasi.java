@@ -225,7 +225,9 @@ public class TestValidasi extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this, "Tidak ada data yang akan divalidasi!");
             }
             String message = "<html>";
-            this.setCursor(new Cursor(Cursor.WAIT_CURSOR));
+            //this.setCursor(new Cursor(Cursor.WAIT_CURSOR));
+            homePage.jalankanGlassPanenya();
+            
 //            message += cekTabel("TMST_BADAN_HUKUM");
 //            message += cekTabel("TMST_DOSEN");
 //            message += cekTabel("TMST_FAKULTAS");
@@ -238,9 +240,11 @@ public class TestValidasi extends javax.swing.JPanel {
             System.out.println("Message : " + message);
             jEditorPane1.setText(message);
             jEditorPane1.setCaretPosition(0);
-            this.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+            //this.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+            homePage.hentikanGlassPanenya();
         } catch (SQLException ex) {
-            this.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+            //this.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+            homePage.hentikanGlassPanenya();
             Logger.getLogger(TestValidasi.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

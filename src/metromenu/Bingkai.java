@@ -11,12 +11,14 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import validasi.komponen.InfiniteProgressPanel;
 
 /**
  *
  * @author asus
  */
 public class Bingkai extends JFrame {
+    private InfiniteProgressPanel glassPane;
     private String nama, password;
     private SplashCologne splash;
     private LoginBox login;
@@ -67,6 +69,20 @@ public class Bingkai extends JFrame {
         setLocationRelativeTo(null);
         setVisible(true);        
         
+        System.out.println("instansiasi glass pane");
+        glassPane = new InfiniteProgressPanel();
+        this.setGlassPane(glassPane);
+        glassPane.stop();
+    }
+    
+    public void jalankanGlassPanenya() {
+        System.out.println("menjalankan glass pane");
+        glassPane.start();
+    }
+    
+    public void hentikanGlassPanenya() {
+        System.out.println("mengentikan glass pane");     
+        glassPane.stop();
     }
     
     public void simpanKodePT(String kodept) {
