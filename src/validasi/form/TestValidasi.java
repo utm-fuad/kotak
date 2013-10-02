@@ -148,20 +148,29 @@ public class TestValidasi extends javax.swing.JPanel {
             TableColumnModel colModel=table.getColumnModel();
             
             String namaTable=((PanelTabel) jTabbedPane1.getComponentAt(jTabbedPane1.getSelectedIndex())).getNamaTabel();
-            ResultSet rs=conn.createStatement().executeQuery("select column_name from c_table_key "
-                    + "where table_name='"+namaTable+"' ");
+            String sQry="select column_name from c_table_key "
+                    + "where table_name='"+namaTable+"' ";
+            System.out.println(sQry);
+            ResultSet rs=conn.createStatement().executeQuery(sQry);
             
             String namaKolom="";
             while(rs.next()){
+                
                 namaKolom=rs.getString("column_name");
-                if(table.getValueAt(iRow, iCol) instanceof String ||table.getValueAt(iRow, iCol) instanceof Date)
-                    s=s.length()>0? " and ": " "+
-                    " "+namaKolom+ "='"+table.getValueAt(iRow, colModel.getColumnIndex(namaKolom)).toString()+"' ";
-                else if(table.getValueAt(iRow, iCol) instanceof Integer || table.getValueAt(iRow, iCol) instanceof Double || table.getValueAt(iRow, iCol) instanceof Float)
-                    s=s.length()>0? " and ": " "+
-                    " "+namaKolom+ "="+table.getValueAt(iRow, colModel.getColumnIndex(namaKolom)).toString()+" ";
+                System.out.println("Nama kolom :"+namaKolom);
+                if(table.getValueAt(iRow, iCol) instanceof Integer || table.getValueAt(iRow, iCol) instanceof Double || table.getValueAt(iRow, iCol) instanceof Float){
+                    s+=s.length()>0? " and ": " ";
+                    s+=" "+namaKolom+ "="+table.getValueAt(iRow, colModel.getColumnIndex(namaKolom)).toString()+" ";
+                }
+                else {
+                    s+=s.length()>0? " and ": " ";
+                    s+=" "+namaKolom + "='"+table.getValueAt(iRow, colModel.getColumnIndex(namaKolom)).toString()+"' ";
+                }
+                
             }
+            System.out.println("Kriteria kolom: "+s);
             return s.length()>0? " where "+s : " ";
+            
         }catch(SQLException se){
             JOptionPane.showMessageDialog(this, se.getMessage());
         }

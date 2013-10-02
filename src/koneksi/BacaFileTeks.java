@@ -136,7 +136,8 @@ public class BacaFileTeks {
             }
             System.out.println(sb.toString());
             File file = new File("ip.ip");
-            try (FileOutputStream fop = new FileOutputStream(file)) {
+            try  {
+                FileOutputStream fop = new FileOutputStream(file);
                 // if file doesn't exists, then create it
                 if (!file.exists()) {
                     file.createNewFile();
